@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Call to Adventure",
+        "start": 0,
+        "end": 40
+    },
+    {
+        "name": "Supernatural Aid",
+        "start": 41,
+        "end": 70
+    },
+    {
+        "name": "Crossing the Threshold",
+        "start": 71,
+        "end": 130
+    },
+    {
+        "name": "Helper",
+        "start": 131,
+        "end": 170
+    },
+    {
+        "name": "Mentor",
+        "start": 171,
+        "end": 200
+    },
+    {
+        "name": "Challenges & Temptations",
+        "start": 201,
+        "end": 300
+    },
+    {
+        "name": "Second Helper",
+        "start": 301,
+        "end": 350
+    },
+    {
+        "name": "Revelation (Death & Rebirth)",
+        "start": 351,
+        "end": 400
+    },
+    {
+        "name": "Transformation",
+        "start": 401,
+        "end": 470
+    },
+    {
+        "name": "Atonement",
+        "start": 471,
+        "end": 540
+    },
+    {
+        "name": "Return with the Elixir",
+        "start": 541,
+        "end": 610
+    },
+    {
+        "name": "Return",
+        "start": 611,
+        "end": 684
+    }
+]
