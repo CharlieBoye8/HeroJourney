@@ -1,0 +1,23 @@
+{
+    "Call to Adventure": "Nausicaä discovers the toxicity of the jungle and learns about the Ohmu, setting her on a journey to understand the balance of nature.",
+    "Supernatural Aid": "She receives guidance from visions and encounters with mysterious natural forces, which strengthen her resolve to protect the ecosystem.",
+    "Crossing the Threshold": "Nausicaä leaves the safety of her valley and ventures into the toxic jungle, encountering threats from both nature and humanity.",
+    "Helper": "Allies like Lord Yupa and the people of the Valley aid Nausicaä in navigating the complex political and environmental landscape.",
+    "Mentor": "Yupa serves as a mentor figure, providing wisdom and perspective on the conflicts between humans and the natural world.",
+    "Challenges & Temptations": "Nausicaä faces the aggressive Tolmekian military, the ravaged land, and her own doubts, as she works to prevent further destruction.",
+    "Second Helper": "Asbel, from Pejite, becomes a key ally, joining forces with Nausicaä to uncover the truth and stop the escalation of war.",
+    "Revelation (Death & Rebirth)": "Nausicaä sacrifices herself to save the Ohmu, undergoing a symbolic death and rebirth as she earns their trust and stops the rampage.",
+    "Transformation": "Through her selfless actions, Nausicaä embodies peace and understanding, transforming the hearts of those around her.",
+    "Atonement": "She reconciles the human and natural worlds, helping to heal the rift between them and showing a path forward.",
+    "Return with the Elixir": "Nausicaä returns to her people with the knowledge and hope needed to live harmoniously with the jungle.",
+    "Return": "Peace is restored as the cycle of violence ends, and Nausicaä's message of coexistence takes root in the hearts of all factions.",
+    "3": "Nausicaä calms an enraged Ohmu early in the story, showcasing her empathy. This moment triggers a significant (positive sentiment spike) as it highlights her connection to nature.",
+    "32": "Nausicaä mourns the death of her father at the hands of the Tolmekians. The (sharp drop in sentiment) reflects this emotional low point.",
+    "120": "Nausicaä is captured by the Tolmekians, leading to a moment of fear and hopelessness reflected in the (low sentiment). However, her ability to calm jungle insects and her emerging alliance with Asbel cause a (sudden rise in sentiment), showing her resilience and growing influence.",
+    "242": "Nausicaä is overwhelmed by the escalating violence between the Tolmekians and Pejite. She witnesses the senseless destruction of life and nature, feeling powerless to stop the war. This leads to a (deep negative sentiment dip), reflecting her despair and the seeming hopelessness of peace.",
+    "278": "Nausicaä risks her life to save villagers trapped by the spreading toxic jungle. The (sentiment peaks) as her heroism shines.",
+    "326": "A moment of despair as Nausicaä believes all hope is lost when the Ohmu stampede begins. This triggers a (sharp negative sentiment dip).",
+    "592": "In a moment of ultimate sacrifice, Nausicaä places herself before the enraged Ohmu to halt their stampede. The Ohmu, recognizing her selflessness, stop just before trampling her. This triggers a (sudden, powerful spike in sentiment), as hope is restored amidst despair.",
+    "638": "After the chaos, there's a moment of calm as Nausicaä awakens and the Ohmu retreat. Though the sentiment lingers in a (valley of uncertainty), this moment marks a (gradual shift toward peace) as the healing begins, reflected in the (uplift in sentiment)."
+  }
+  
