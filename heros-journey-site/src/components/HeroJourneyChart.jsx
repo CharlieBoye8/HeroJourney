@@ -6,15 +6,29 @@ import {
 import sentimentData from '../data/sentiment_data.json';
 import phases from '../data/phases.json';
 
+// Vibrant phase colors
 const phaseColors = [
-  '#d0e6f9', '#e0eaf3', '#fdf1dc', '#ece6e6', '#f8e6f2',
-  '#d6f3f3', '#ffe0cc', '#e6f0e9', '#f9e0f0', '#f0e6d6',
-  '#ccf2ff', '#e6ffe6'
+  '#6baed6', 
+  '#fd8d3c', 
+  '#74c476', 
+  '#e37777', 
+  '#9e9ac8', 
+  '#8c6d31', 
+  '#c994c7', 
+  '#969696', 
+  '#bcbd22', 
+  '#17becf', 
+  '#9ecae1',  
+  '#fdd0a2'  
 ];
+
 
 const HeroJourneyChart = () => {
   const [hoverText, setHoverText] = useState(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  // Find max line from sentimentData
+  const maxLine = Math.max(...sentimentData.map(d => d.line));
 
   const handleMouseLeave = () => {
     setHoverText(null);
@@ -48,26 +62,47 @@ const HeroJourneyChart = () => {
         onMouseLeave={handleMouseLeave}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="line" label={{ value: 'Script Line Number', position: 'insideBottomRight', offset: -5 }} />
-        <YAxis domain={['auto', 'auto']} label={{ value: 'Sentiment Polarity', angle: -90, position: 'insideLeft' }} />
-        <Tooltip formatter={(value) => value.toFixed(2)} labelFormatter={(label) => `Line ${label}`} />
+        <XAxis
+          dataKey="line"
+          type='number'
+          domain={[0, 684]} // Force domain to cover all Hero's Journey phases
+          label={{ value: 'Script Line Number', position: 'insideBottomRight', offset: -5 }}
+        />
+        <YAxis
+          domain={['auto', 'auto']}
+          label={{ value: 'Sentiment Polarity', angle: -90, position: 'insideLeft' }}
+        />
+        <Tooltip
+          formatter={(value) => value.toFixed(2)}
+          labelFormatter={(label) => `Line ${label}`}
+        />
 
+        {/* Phases with clamped rendering */}
         {phases.map((phase, idx) => (
-          <ReferenceArea
-            key={idx}
-            x1={phase.start}
-            x2={phase.end}
-            fill={phaseColors[idx % phaseColors.length]}
-            fillOpacity={0.4}
-            ifOverflow="extendDomain"
-          />
+          phase.start <= maxLine && (
+            <ReferenceArea
+              key={idx}
+              x1={phase.start}
+              x2={Math.min(phase.end, maxLine)} // Clamp x2 to maxLine
+              fill={phaseColors[idx % phaseColors.length]}
+              fillOpacity={0.6}
+              ifOverflow="extendDomain"
+            />
+          )
         ))}
 
         <ReferenceArea y1={0} y2={0} stroke="red" strokeDasharray="5 5" label="Neutral" />
 
-        <Line type="monotone" dataKey="sentiment" stroke="#007BFF" dot={false} name="NAUSICAA" />
+        <Line
+          type="monotone"
+          dataKey="sentiment"
+          stroke="#007BFF"
+          dot={false}
+          name="NAUSICAA"
+        />
       </LineChart>
 
+      {/* Legend */}
       <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {phases.map((phase, idx) => (
           <div key={idx} style={{ display: 'flex', alignItems: 'center', margin: '5px 10px' }}>
@@ -83,6 +118,7 @@ const HeroJourneyChart = () => {
         ))}
       </div>
 
+      {/* Hover Pop-up */}
       {hoverText && (
         <div style={{
           position: 'absolute',
